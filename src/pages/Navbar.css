@@ -1,0 +1,27 @@
+.navbar {
+    left: 0; /* Position navbar to the left */
+    width: 250px; /* Adjust width as needed */
+    height: 100vh; /* Full height of viewport */
+    background-color: #000000; /* Light background color */
+    padding: 10px 20px; /* Add padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  }
+   
+  .navbar .navbar-brand {
+    font-weight: bold; /* Adjust font weight for brand name */
+    color: #ffffff; /* Darker text color for brand name */
+  }
+   
+  .navbar-nav {
+    display: flex; /* Flexbox for horizontal alignment */
+    flex-direction: column; /* Align links vertically */
+  }
+   
+  .nav-link {
+    color: #ffffff; /* Darker text color for links */
+    margin-bottom: 10px; /* Add spacing between links */
+  }
+   
+  .nav-link:hover {
+    color: #007bff; /* Accent color on hover */
+  }
