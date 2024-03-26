@@ -1,0 +1,31 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif; /* Set a default font if desired */
+  }
+  
+  /* Container */
+  .container {
+    max-width: 960px; /* Adjust as needed for desired content width */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 2rem; /* Add some padding for visual spacing */
+  }
+  
+  /* Home content */
+  h1 {
+    margin-bottom: 1rem; /* Add some space after the heading */
+  }
+  
+  p {
+    line-height: 2; /* Adjust line spacing for readability */
+  }
+  
+  /* Footer (assuming styles are defined in a separate CSS file) */
+  /* ... Place your footer styles here ... */
+  
+  /* Additional styles (optional) */
+  .mt-5 { /* Assuming this is a custom class for margin-top spacing */
+    margin-top: 5rem;
+  }
+  

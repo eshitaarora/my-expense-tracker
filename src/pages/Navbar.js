@@ -19,6 +19,8 @@ function Navbar({ isRightSide = false }) {
   return (
     <nav className={`navbar navbar-expand-lg navbar-${isRightSide ? 'dark' : 'light'} bg-${isRightSide ? 'dark' : 'light'} fixed-top`}>
       <div className="container-fluid">
+      <img src="https://logodownload.org/wp-content/uploads/2019/10/deloitte-logo-0.png" alt="React Image" className="photo" />
+  
         <div className="navbar-brand" to="/">Expense Tracker</div>
         <div className={`collapse navbar-collapse ${menuClasses}`} id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">

@@ -7,6 +7,7 @@ import Navbar from './pages/Navbar';
 import About from './pages/About';
 import Logout from './pages/Logout';
 import Footer from './pages/Footer';
+import Expense from './pages/Client/Expense';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/about"  element={<About/>} />
           <Route path="/logout"  element={<Logout/>} />
           <Route path="/footer"  element={<Footer/>} />
+          <Route path="/expense" element={<Expense />} />
       </Routes>
     </Router>
   );
