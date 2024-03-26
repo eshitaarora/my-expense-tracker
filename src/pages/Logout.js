@@ -19,7 +19,7 @@ function Logout() {
         <h1>Logout</h1>
         <p>Are you sure you want to logout?</p>
         <button className="btn btn-primary" onClick={handleLogout}>Yes</button>
-        <button className="btn btn-secondary" onClick={() => navigate('/')}>No</button>
+        <button className="btn btn-secondary" onClick={() => navigate('/home')}>No</button>
       </div>
     </>
     

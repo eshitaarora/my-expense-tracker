@@ -7,7 +7,9 @@ import Navbar from './pages/Navbar';
 import About from './pages/About';
 import Logout from './pages/Logout';
 import Footer from './pages/Footer';
-import Expense from './pages/Client/Expense';
+import Expense from './pages/Employee/Expense';
+// import ExpenseChart from './pages/Manager/ExpenseChart';
+import ManHome from './pages/Manager/ManHome';
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
           <Route path="/logout"  element={<Logout/>} />
           <Route path="/footer"  element={<Footer/>} />
           <Route path="/expense" element={<Expense />} />
+          <Route path="/managerhome" element={<ManHome />} />
       </Routes>
     </Router>
   );

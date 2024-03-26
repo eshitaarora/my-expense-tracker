@@ -1,9 +1,12 @@
 import React from 'react';
 import './About.css';
 import Navbar from './Navbar';
+import Footer from './Footer';
  
 function About() {
   return (
+    <>
+      <Navbar></Navbar>
 <div className="about-page">
 <h1 className="about-title">About Your Expense Tracker</h1>
 <div className="about-content">
@@ -23,10 +26,12 @@ function About() {
 </ul>
 <p>
           With this app, you can take control of your finances and make informed decisions about your spending. 
-          Get started by adding your income and expenses, and see how it helps you achieve your financial goals!
+          Get started by adding your income and expenses!
 </p>
 </div>
 </div>
+<Footer></Footer>
+    </>
   );
 }
  

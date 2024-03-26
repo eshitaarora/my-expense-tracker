@@ -1,10 +1,13 @@
 import Layout from "../../components/Layout";
+import Navbar from './../Navbar';
+import Footer from './../Footer';
 
 const Expense = () =>{
     
     return(
         
         <>
+        <header></header>
             <Layout >
             <div className="row justify-content-md-center">
                 <h1>
@@ -26,9 +29,20 @@ const Expense = () =>{
                         <input type="text" className="desc" id="desc"></input>
                     </ul>
                     
-                    <ul> <label className="type" id="type">ExpenseType</label><> </>
-                        <input type="text" className="type" id="type"></input>
-                        
+                    <ul>
+                        <div className='row'>
+                            <div className="form-group col-sm-12">
+                                <label htmlFor="Type">ExpenseType</label>
+                                <select>
+                                <option>ChooseType</option>
+                                <option>Travel</option>
+                                <option>Food</option>
+                                <option>Health/Medical</option>
+                                <option>Accessories</option>
+                                <option>Miscellanious</option>
+                                </select>
+                            </div>
+                        </div>
                     </ul>
                     
                     <ul>
@@ -44,7 +58,9 @@ const Expense = () =>{
 
                     {/* <label className="status" id="status">StatusOfRequest</label>
                     <input type="text" className="status" id="status"></input> */}
-                    
+                    <button type="Submit">
+                        Submit
+                    </button>
                     
                         
                 </div>
@@ -52,7 +68,8 @@ const Expense = () =>{
             </div>
             
             </Layout>
-        </>
+            <Footer></Footer>
+    </>
     )
 }
 

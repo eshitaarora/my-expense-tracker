@@ -25,15 +25,11 @@ function Navbar({ isRightSide = false }) {
         <div className={`collapse navbar-collapse ${menuClasses}`} id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
           <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+              <Link className="nav-link" to="/home">Home</Link>
             </li>
 
           <li className="nav-item">
               <Link className="nav-link" to="/about">About</Link>
-            </li>
-
-            <li className="nav-item">
-              <Link className="nav-link" to="/login">Login</Link>
             </li>
 
             <li className="nav-item">

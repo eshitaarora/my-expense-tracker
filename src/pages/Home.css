@@ -5,11 +5,12 @@ body {
     font-family: sans-serif; /* Set a default font if desired */
   }
   
-  /* Container */
   .container {
-    max-width: 960px; /* Adjust as needed for desired content width */
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 2rem; /* Add some padding for visual spacing */
+    /* Style the About page title */
+    text-align: center;
+    /* margin-bottom: -6rem; */
+    margin-top: 0rem;
+    margin-bottom: 20rem;
   }
   
   /* Home content */
