@@ -1,0 +1,41 @@
+.footer {
+    /* Style the overall footer container */
+    background-color: #f2f2f2; /* Adjust background color as needed */
+    padding: 2rem 0;
+    text-align: center;
+  }
+  .footer-content {
+    /* Style the content area within the footer */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+   
+  .footer-section {
+    /* Style each footer section */
+    margin-bottom: 1rem;
+  }
+   
+  .footer-section h3 {
+    /* Style the section headings */
+    margin-bottom: 0.5rem;
+  }
+   
+  .footer-copyright {
+    /* Style the copyright section */
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+   
+  .footer a {
+    /* Style the contact email link */
+    color: #000;
+    text-decoration: none;
+  }
+   
+  .footer a:hover {
+    /* Hover effect for the contact email link */
+    text-decoration: underline;
+  }

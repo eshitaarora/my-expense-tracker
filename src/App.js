@@ -5,7 +5,10 @@ import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
 import Home from './pages/Home';
 import Navbar from './pages/Navbar';
- 
+import About from './pages/About';
+import Logout from './pages/Logout';
+import Footer from './pages/Footer';
+
 function App() {
   return (
     <Router>
@@ -15,6 +18,9 @@ function App() {
           <Route path="/dashboard"  element={<Dashboard/>} />
           <Route path="/home"  element={<Home/>} />
           <Route path="/navbar"  element={<Navbar/>} />
+          <Route path="/about"  element={<About/>} />
+          <Route path="/logout"  element={<Logout/>} />
+          <Route path="/footer"  element={<Footer/>} />
       </Routes>
     </Router>
   );
