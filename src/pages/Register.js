@@ -7,7 +7,8 @@ const API_URL = process.env.REACT_APP_API_URL;
 function Register() {
     const navigate = useNavigate();
     const [name, setName] = useState("")
-    const [email, setEmail] = useState("")
+    const [designation, setDesignation] = useState("")
+    const [projectname, setProjectName] = useState("")
     const [password, setPassword] = useState("")
     const [confirmPassword, setConfirmPassword] = useState("")
     const [validationErrors, setValidationErrors] = useState({});
@@ -24,7 +25,8 @@ function Register() {
         setIsSubmitting(true)
         let payload = {
             name: name,
-            email:email,
+            designation:designation,
+            projectname:projectname,
             password:password,
             password_confirmation:confirmPassword
         }
@@ -62,6 +64,7 @@ function Register() {
                                         name="name"
                                         value={name}
                                         onChange={(e)=>{setName(e.target.value)}}
+                                        placeholder="Enter Name"
                                     />
                                     {validationErrors.name != undefined &&
                                         <div className="flex flex-col">
@@ -74,25 +77,48 @@ function Register() {
                                 </div>
                                 <div className="mb-3">
                                     <label 
-                                        htmlFor="email"
-                                        className="form-label">Email address
+                                        htmlFor="designation"
+                                        className="form-label">Designation
                                     </label>
                                     <input 
-                                        type="email"
+                                        type="designation"
                                         className="form-control"
-                                        id="email"
-                                        name="email"
-                                        value={email}
-                                        onChange={(e)=>{setEmail(e.target.value)}}
+                                        id="designation"
+                                        name="designation"
+                                        value={designation}
+                                        onChange={(e)=>{setDesignation(e.target.value)}}
+                                        placeholder="Enter Designation"
                                     />
-                                    {validationErrors.email != undefined &&
+                                    {validationErrors.designation != undefined &&
                                         <div className="flex flex-col">
                                             <small  className="text-danger">
-                                            {validationErrors.email[0]}
+                                            {validationErrors.designation[0]}
                                             </small >
                                         </div>
                                     }
                                      
+                                </div>
+                                <div className="mb-3">
+                                    <label 
+                                        htmlFor="projectname"
+                                        className="form-label">Project Name
+                                    </label>
+                                    <input 
+                                        type="projectname"
+                                        className="form-control"
+                                        id="projectname"
+                                        name="projectname"
+                                        value={projectname}
+                                        onChange={(e)=>{setProjectName(e.target.value)}}
+                                        placeholder="Enter Project Name"
+                                    />
+                                    {validationErrors.projectname != undefined &&
+                                        <div className="flex flex-col">
+                                            <small  className="text-danger">
+                                            {validationErrors.projectname[0]}
+                                            </small >
+                                        </div>
+                                    }
                                 </div>
                                 <div className="mb-3">
                                     <label 
@@ -106,6 +132,7 @@ function Register() {
                                         name="password"
                                         value={password}
                                         onChange={(e)=>setPassword(e.target.value)}
+                                        placeholder="Enter password"
                                     />
                                     {validationErrors.password != undefined &&
                                         <div className="flex flex-col">
@@ -127,6 +154,7 @@ function Register() {
                                         name="confirm_password"
                                         value={confirmPassword}
                                         onChange={(e)=>setConfirmPassword(e.target.value)}
+                                        placeholder="Confirm password"
                                     />
                                 </div>
                                 <div className="d-grid gap-2">
