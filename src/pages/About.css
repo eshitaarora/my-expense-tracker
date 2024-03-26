@@ -1,0 +1,19 @@
+.about-page {
+  /* Style the overall About page container */
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 700px; /* Adjust width as needed */
+}
+ 
+.about-title {
+  /* Style the About page title */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+ 
+.about-features {
+  /* Style the features list */
+  list-style: disc;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}

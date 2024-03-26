@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className="container mt-5">
       <h1>Welcome Home!</h1>
-      <p>This is the home page content that users see after successful login.</p>
+      <p>Welcome to Expense Tracker Platform</p>
       {/* Add more content for the home page as needed */}
     </div>
   );
