@@ -1,6 +1,6 @@
 body {
-  font-family: sans-serif;
-  background: linear-gradient(to right, #5fad68, #38ba63);
+  font-family: 'Trebuchet MS';
+  background: linear-gradient(to right, #88a1dc, #4461c1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,7 @@ body {
 }
 
 .card {
-  background-color: #81daa3;
+  background-color: #000000;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   padding: 2rem;
