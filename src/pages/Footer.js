@@ -1,7 +1,10 @@
 import React from 'react';
- 
+import Navbar from './Navbar';
+
 function Footer() {
   return (
+    <>
+    <Navbar></Navbar>
 <footer className="footer">
 <div className="footer-content">
 <div className="footer-section">
@@ -21,6 +24,7 @@ function Footer() {
 </div>
 </div>
 </footer>
+</>
   );
 }
  

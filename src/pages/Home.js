@@ -1,14 +1,18 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Navbar from './Navbar';
+
+
 
 function Home() {
-
   return (
-    <div className="container mt-5">
-      <h1>Welcome Home!</h1>
-      <p>Welcome to Expense Tracker Platform</p>
-      {/* Add more content for the home page as needed */}
-    </div>
+    <>
+      <Navbar></Navbar>
+      <div className="container mt-5">
+        <h1>Welcome Home!</h1>
+        <p>Welcome to Expense Tracker Platform</p>
+      </div>
+    </>
   );
 }
 
