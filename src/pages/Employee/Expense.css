@@ -1,82 +1,76 @@
-  input[type="text"],
-  input[type="number"],
-  select {
-    padding: 2px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  
-  input[type="datetime-local"] {
-    padding: 2px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    width: 100%;
-    margin-bottom: 10px; /* Adjust if needed for spacing */
-  }
-  
-  select {
-    padding: 2px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    width: 100%;
-  }
-  
-  button[type="submit"] {
-    background-color: #00ff4c;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #0062cc; /* Darker blue on hover */
-  }
-  
-  /* Additional visual enhancements */
-  /* Consider these additions for a more polished look: */
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 20px;
-  }
-  
-  .expense-description {
-    width: 100%; /* Ensure full width for description field */
-  }
-  
-  /* Error handling (optional) */
-  .error {
-    color: red;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-.id{
-    color: #ffffff;
+/* Base styles for consistent typography and spacing */
+body {
+  font-family: sans-serif;
+  font-size: 10px;
+  line-height: 1.5;
+  margin: 0;
 }
-.date{
-    color: #ffffff;
+
+h2 {
+  margin-bottom: 2px;
 }
-.desc{
-    color: #ffffff;
+
+ul {
+  list-style: none;
+  padding: 0;
 }
-.form-group{
-    color: #ffffff;
+
+label {
+  display: block;
+  margin-bottom: 2px;
 }
-.amt{
-    color: #ffffff;
+
+input,
+select {
+  width: 100%;
+  padding: 2px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
 }
-.man{
-    color: #ffffff;
+
+/* Layout for form elements with clear labeling and structure */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 2px;
 }
-.row{
-    color: #ffffff;
+
+.form-group {
+  margin-bottom: 2px;
+  width: 100%; /* Ensure full width on smaller screens */
+}
+
+label + span { /* Targeting the empty <span> for visual clarity */
+  margin-left: 2px;
+}
+
+/* Consistent styling for specific fields with appropriate spacing */
+.id,
+.date,
+.amt,
+.man {
+  margin-bottom: 2px;
+}
+
+/* Visually enhance the submit button */
+.submit-button {
+  background-color: #41913a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Responsive styling for different screen sizes */
+@media (max-width: 768px) {
+  /* Adjust layout for smaller screens, as needed */
+  .row {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
