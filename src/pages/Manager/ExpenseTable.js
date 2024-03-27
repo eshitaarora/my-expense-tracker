@@ -134,7 +134,7 @@ const ExpenseTable = () => {
                 <td
                   style={{
                     border: "solid thin",
-                    color: "white",
+                    color: "black",
                     textAlign: "center",
                   }}
                 >
@@ -144,7 +144,7 @@ const ExpenseTable = () => {
                 <td
                   style={{
                     border: "solid thin",
-                    color: "white",
+                    color: "black",
                     textAlign: "center",
                   }}
                 >
@@ -154,7 +154,7 @@ const ExpenseTable = () => {
                 <td
                   style={{
                     border: "solid thin",
-                    color: "white",
+                    color: "black",
                     textAlign: "center",
                   }}
                 >
@@ -164,7 +164,7 @@ const ExpenseTable = () => {
                 <td
                   style={{
                     border: "solid thin",
-                    color: "white",
+                    color: "black",
                     textAlign: "center",
                   }}
                 >
@@ -184,7 +184,7 @@ const ExpenseTable = () => {
                 <td
                   style={{
                     border: "solid thin",
-                    color: "white",
+                    color: "black",
                     textAlign: "center",
                   }}
                 >
@@ -194,7 +194,7 @@ const ExpenseTable = () => {
                 <td
                   style={{
                     border: "solid thin",
-                    color: "white",
+                    color: "black",
                     textAlign: "center",
                   }}
                 >
@@ -214,7 +214,7 @@ const ExpenseTable = () => {
                 <td
                   style={{
                     border: "solid thin",
-                    color: "white",
+                    color: "black",
                     textAlign: "center",
                   }}
                 >
