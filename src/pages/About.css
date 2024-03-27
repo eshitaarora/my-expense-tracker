@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif; /* Set a default font if desired */
+  font-family: monospace; /* Set a default font if desired */
 }
 
 /* Container */
@@ -29,6 +29,7 @@ body {
 }
 
 .about-features {
+  display:block;
   list-style: disc; /* Set list style (bullets) */
   padding-left: 1rem; /* Indent list items */
   margin-top: 0rem;

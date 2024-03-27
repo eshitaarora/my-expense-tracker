@@ -19,13 +19,17 @@
   }
    
   .nav-link {
-    color: #ffffff; /* Darker text color for links */
-    margin: 20%;
-    margin-bottom: 10px; /* Add spacing between links */
+    display: inline-block; /* Allow buttons to sit side-by-side */
+    padding: 0.5rem 1rem; /* Add some padding */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Add some rounded corners */
+    cursor: pointer; /* Indicate clickable behavior */
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent element */ /* Adjust as needed */
   }
    
   .nav-link:hover {
-    color: #007bff; /* Accent color on hover */
+    color: #409e61; /* Accent color on hover */
   }
   /* In your Navbar.css file */
 .nav-item {
@@ -33,11 +37,30 @@
     position:relative;
     font-size: 20px;
   }
-
   .photo {
     margin-top: 4%;
     margin-left: 0%;
     height: 50px;
     width: 250px; 
     background-color: #ffffff;
+}
+/* Navbar.css */
+
+.nav-button {
+  display: inline-block; /* Allow buttons to sit side-by-side */
+  padding: 10px 20px; /* Adjust padding for desired button size */
+  margin: 20px 20px;; /* Add some margin for spacing */
+  border: 1px solid #000000; /* Remove default button border */
+  border-radius: 20px; /* Add rounded corners for a button-like look */
+  background-color: #ffffff; /* Set white background color */
+  color: #333; /* Set text color (adjust as needed) */
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none; /* Remove underline from links */
+  cursor: pointer; /* Indicate clickable behavior with hover effect */
+  transition: background-color 0.2s ease-in-out; /* Smooth transition on hover */
+}
+
+.nav-button:hover {
+  background-color: #f5f5f5; /* Slightly lighten background on hover */
 }

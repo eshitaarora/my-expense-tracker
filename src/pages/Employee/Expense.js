@@ -1,5 +1,5 @@
 import Layout from "../../components/Layout";
-import Navbar from './../Navbar';
+
 import Footer from './../Footer';
 
 const Expense = () =>{

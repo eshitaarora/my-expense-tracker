@@ -10,6 +10,7 @@ import Footer from './pages/Footer';
 import Expense from './pages/Employee/Expense';
 // import ExpenseChart from './pages/Manager/ExpenseChart';
 import ManHome from './pages/Manager/ManHome';
+import ExpenseList from './components/employee/ExpenseList';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/footer"  element={<Footer/>} />
           <Route path="/expense" element={<Expense />} />
           <Route path="/managerhome" element={<ManHome />} />
+          <Route path="/expenselist" element={<ExpenseList />} />
       </Routes>
     </Router>
   );
