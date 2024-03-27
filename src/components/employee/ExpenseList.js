@@ -11,27 +11,31 @@ import { delExpense } from "../services/DataService";
 import { editExpense } from "../services/DataService";
 
 const ExpenseList = ({ id }) => {
-  const [expenses, setExpense] = useState("");
+  const [expenses, setExpenses] = useState("");
 
   useEffect(() => {
-    getAllExpenses()
+    let userId = localStorage.getItem("employeeId");
+    getExpenseById(userId)
       .then((response) => {
         console.log(response.data);
-        setExpense(response.data);
+        setExpenses(response.data);
       })
       .catch((error) => {
         console.log(error);
       });
   }, []);
+
   return (
     <>
       <Navbar />
       <div>
         <>
-          <title>Expense Details</title>
+          <h2>
+            <title>Expense Details</title>
+          </h2>
         </>
         <>
-          <h3>EXPENSE DETAILS</h3>
+          <h2>EXPENSE DETAILS</h2>
 
           <table
             border="2"
@@ -136,9 +140,9 @@ const ExpenseList = ({ id }) => {
                     <td>{user.amount}</td>
                     <td>{user.managerName}</td>
                     <td>
-                      <button onClick={() => editExpense(user.expenseId)}>
+                      {/* <button onClick={() => updateExpense(user.expenseId)}>
                         Update{" "}
-                      </button>
+                      </button> */}
                       <button onClick={() => delExpense(user.expenseId)}>
                         Delete
                       </button>

@@ -35,11 +35,6 @@ function Navbar({ isRightSide = false }) {
             </li>
             <li className="nav-button">
             <span>
-            <Link className="nav-link" to="/expense">Expenses</Link>
-            </span>
-            </li>
-            <li className="nav-button">
-            <span>
             <Link className="nav-link" to="/logout">Logout</Link>
             </span>
             </li>

@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import { addEmployee } from "../components/services/EmployeeDataService";
+import "./Register.css";
 
 const Register = () => {
   const [employeeName, setEmployeeName] = useState("");
