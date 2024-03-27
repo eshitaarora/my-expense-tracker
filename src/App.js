@@ -29,6 +29,7 @@ function App() {
         <Route path="/managerhome" element={<ManHome />} />
         <Route path="/expenselist" element={<ExpenseList />} />
         <Route path="*" element={<Page404 />} />
+        <Route path="expensetable" element={<ExpenseTable />} />
       </Routes>
     </Router>
   );
