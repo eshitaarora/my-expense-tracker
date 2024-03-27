@@ -18,13 +18,13 @@ body {
 .about-title {
   margin-bottom: 1rem; /* Add some space after the heading */
   font-size: 1.5rem; /* Adjust heading size as needed */
-  color:#ffffff;
+  color:#000000;
   font-family: monospace;
 }
 
 .about-content {
   line-height: 1.5; /* Adjust line spacing for readability */
-  color: #ffffff;
+  color: #000000;
   font-family: monospace;
 }
 

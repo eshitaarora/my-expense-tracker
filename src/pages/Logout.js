@@ -16,7 +16,6 @@ function Logout() {
   return (
     <>
       <Navbar></Navbar>
-      <div> hi</div>
       <div className="container mt-5">
         <h2>Logout</h2>
         <p>Are you sure you want to logout?</p>
