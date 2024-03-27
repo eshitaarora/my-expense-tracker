@@ -4,8 +4,6 @@ import { addExpense } from "../../components/services/DataService";
 import { useState } from "react";
 import Layout from "../../components/Layout";
 
-import Footer from './../Footer';
-
 const Expense = () => {
   const [employeeId, setEmployeeId] = useState("");
   const [dateOfRequest, setDateOfRequest] = useState("");
