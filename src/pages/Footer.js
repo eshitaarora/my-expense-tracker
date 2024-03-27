@@ -6,7 +6,7 @@ function Footer() {
   return (
 <>
 <Navbar />
-<footer className="footer" style={{borderTop: '2px solid black'}}>
+<footer className="footer" style={{borderTop: '2px solid #454242'}}>
     <div className="footer-content">
     <div className="footer-section">
     <h3>About</h3>
@@ -19,7 +19,7 @@ function Footer() {
     <p>
                 Have questions or feedback? Feel free to reach out!
     <br />
-    <a href="mailto:esarora@deloitte.com">youremail@example.com</a>
+    <a href="mailto:esarora@deloitte.com">esarora@deloitte.com</a>
     </p>
     </div>
     <div className="footer-copyright">

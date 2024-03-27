@@ -9,8 +9,7 @@ function Home() {
     <>
       <Navbar></Navbar>
       <div className="container mt-5">
-        <h1>Welcome Home!</h1>
-        <p>Welcome to Expense Tracker Platform</p>
+      <div className="navbar-brand" to="/">Expense Tracker</div>
       </div>
       <Footer></Footer>
     </>

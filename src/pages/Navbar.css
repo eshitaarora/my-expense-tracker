@@ -2,7 +2,7 @@
     left: 0; /* Position navbar to the left */
     width: 250px; /* Adjust width as needed */
     height: 98vh; /* Full height of viewport */
-    background-color: #000000; /* Light background color */
+    background-color: #454242; /* Light background color */
     padding: 10px 10px; /* Add padding */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
     position: fixed; bottom: 0; left: 0
@@ -35,8 +35,9 @@
   }
 
   .photo {
-    margin-top: 0%;
-    height: 250px;
+    margin-top: 4%;
+    margin-left: 0%;
+    height: 50px;
     width: 250px; 
     background-color: #ffffff;
 }
