@@ -11,6 +11,7 @@ import Expense from "./pages/Employee/Expense";
 import ExpenseChart from './pages/Manager/ExpenseTable';
 import ManHome from "./pages/Manager/ManHome";
 import ExpenseList from "./components/employee/ExpenseList";
+import Page404 from "./pages/Page404";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
         <Route path="/expense" element={<Expense />} />
         <Route path="/managerhome" element={<ManHome />} />
         <Route path="/expenselist" element={<ExpenseList />} />
-        <Route path="/expensechart" element={<ExpenseChart />} />
+        <Route path="*" element={<Page404 />} />
       </Routes>
     </Router>
   );
