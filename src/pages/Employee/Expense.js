@@ -3,7 +3,7 @@ import { addExpense } from "../../components/services/DataService";
 import { useState } from "react";
 import Layout from "../../components/Layout";
 import './Expense.css';
-import Footer from './../Footer';
+import Footer from "./../Footer";
 
 const Expense = () => {
   const [employeeId, setEmployeeId] = useState("");
@@ -42,7 +42,7 @@ const Expense = () => {
 
   return (
     <>
-    <navbar></navbar>
+      <navbar></navbar>
       <Layout>
         <div className="row justify-content-md-center">
           <h2>Add expenses</h2>
