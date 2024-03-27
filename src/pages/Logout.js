@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Link, useNavigate } from "react-router-dom"
 import Layout from "../components/Layout"
 import Navbar from './Navbar'
+import "./Logout.css";
 
 function Logout() {
   const navigate = useNavigate();
@@ -15,8 +16,9 @@ function Logout() {
   return (
     <>
       <Navbar></Navbar>
+      <div> hi</div>
       <div className="container mt-5">
-        <h1>Logout</h1>
+        <h2>Logout</h2>
         <p>Are you sure you want to logout?</p>
         <button className="btn btn-primary" onClick={handleLogout}>Yes</button>
         <button className="btn btn-secondary" onClick={() => navigate('/home')}>No</button>

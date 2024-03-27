@@ -5,8 +5,7 @@ import { getAllExpenses } from "../services/DataService";
 import { Link } from "react-router-dom";
 import Navbar from "../../pages/Navbar";
 import Footer from "../../pages/Footer";
-
-// import { setProductListObj } from "./redux/ProductSlice";
+import "./ExpenseList.css";
 
 const ExpenseList = () => {
   const [expenses, setExpense] = useState("");

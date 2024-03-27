@@ -1,0 +1,47 @@
+/* Overall container styling */
+.container {
+    text-align: center; /* Center content horizontally */
+  }
+  
+  /* Logout heading (h1) */
+  h2 {
+    margin-bottom: 20px; /* Add some spacing below the heading */
+    color:#ffffff;
+  }
+  
+  
+  /* Confirmation message (p) */
+  p {
+    font-size: 16px; /* Adjust font size as needed */
+    margin-bottom: 15px; /* Add some spacing below the message */
+    color:#ffffff;
+  }
+  
+  /* Buttons */
+  /* button {
+    margin-right: 10px; 
+    padding: 10px 20px; 
+    border: none; 
+    
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out; 
+  } */
+  
+  .btn-primary {
+    background-color: #41913a; /* Blue color for primary button */
+    color: white; /* Text color white for primary button */
+  }
+  
+  .btn-primary:hover {
+    background-color: #41913a; /* Darker blue on hover */
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d; /* Gray color for secondary button */
+    color: white; /* Text color white for secondary button */
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268; /* Darker gray on hover */
+  }
+  

@@ -1,8 +1,9 @@
 import Navbar from "./../Navbar";
-import Footer from "./../Footer";
 import { addExpense } from "../../components/services/DataService";
 import { useState } from "react";
 import Layout from "../../components/Layout";
+
+import Footer from "./../Footer";
 
 const Expense = () => {
   const [employeeId, setEmployeeId] = useState("");
@@ -41,9 +42,10 @@ const Expense = () => {
 
   return (
     <>
+      <navbar></navbar>
       <Layout>
         <div className="row justify-content-md-center">
-          <h1>Add expenses</h1>
+          <h2>Add expenses</h2>
           <form>
             <ul>
               <label className="id" id="id">
@@ -163,7 +165,7 @@ const Expense = () => {
 
             <button
               style={{
-                backgroundColor: "grey",
+                backgroundColor: "#41913a",
                 textAlign: "center",
                 fontWeight: "bold",
               }}
@@ -175,6 +177,7 @@ const Expense = () => {
           </form>
         </div>
       </Layout>
+      <Footer></Footer>
     </>
   );
 };

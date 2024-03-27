@@ -33,7 +33,11 @@ function Navbar({ isRightSide = false }) {
             <Link className="nav-link" to="/about">About</Link>
             </span>
             </li>
-
+            <li className="nav-button">
+            <span>
+            <Link className="nav-link" to="/expense">Expenses</Link>
+            </span>
+            </li>
             <li className="nav-button">
             <span>
             <Link className="nav-link" to="/logout">Logout</Link>
