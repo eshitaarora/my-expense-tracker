@@ -6,6 +6,7 @@ import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 import Navbar from "./pages/Navbar";
 import ExpenseList from "./components/employee/ExpenseList";
+import Expense from "./pages/Client/Expense";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/navbar" element={<Navbar />} />
         <Route path="/expenselist" element={<ExpenseList />} />
+        <Route path="/expense" element={<Expense />} />
       </Routes>
     </Router>
   );

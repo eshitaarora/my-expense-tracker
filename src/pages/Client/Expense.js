@@ -1,59 +1,182 @@
 import Layout from "../../components/Layout";
+import { addExpense } from "../../components/services/DataService";
+import { useState } from "react";
+const Expense = () => {
+  const [employeeId, setEmployeeId] = useState("");
+  const [dateOfRequest, setDateOfRequest] = useState("");
+  const [expenseType, setExpenseType] = useState("");
+  const [expenseDescription, setExpenseDescription] = useState("");
+  const [amount, setAmount] = useState("");
+  const [managerName, setManagerName] = useState("");
+  const [managerId, setManagerId] = useState("");
+  const [status, setStatus] = useState("");
+  const [expenseId, setExpenseId] = useState("");
 
-const Expense = () =>{
-    
-    return(
-        
-        <>
-            <Layout >
-            <div className="row justify-content-md-center">
-                <h1>
-                    Add expenses
-                </h1>
-                <div className="form">
-                    <ul>
-                        <label className="id" id="id">EmployeeId</label><> </>
-                        <input type="number" className="id" id="id"></input>
-                    </ul>
-                    
-                    <ul>
-                        <label className="date" id="date">DateOfRequest</label><> </>
-                        <input type="datetime" className="date" id="date"></input>
-                    </ul>
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-                    <ul>
-                        <label className="desc" id="desc">ExpenseDescription</label><> </>
-                        <input type="text" className="desc" id="desc"></input>
-                    </ul>
-                    
-                    <ul> <label className="type" id="type">ExpenseType</label><> </>
-                        <input type="text" className="type" id="type"></input>
-                        
-                    </ul>
-                    
-                    <ul>
-                        <label className="amt" id="amt">Amount</label><> </>
-                        <input type="number" className="amt" id="amt"></input>
-                    </ul>
-                    
-                    <ul>
-                        <label className="man" id="man">ManagerName</label><> </>
-                        <input type="text" className="man" id="man"></input>
-                    </ul>
-                    
+    const expenseDetails = {
+      dateOfRequest,
+      expenseType,
+      expenseDescription,
+      amount,
+      status,
+      managerName,
+      managerId,
+    };
 
-                    {/* <label className="status" id="status">StatusOfRequest</label>
+    // Send userDetails to your .NET Core Web API endpoint
+    addExpense(expenseDetails)
+      // .then((response) => response.json())
+      .then((data) => {
+        console.log("Value stored successfully!", data);
+        // Handle any further actions after successful storage
+      })
+      .catch((error) => {
+        console.error("Error storing value:", error);
+        // Handle error case
+      });
+
+    // You can handle user authentication separately in your .NET Core Web API
+  };
+
+  return (
+    <>
+      <Layout>
+        <div className="row justify-content-md-center">
+          <h1>Add expenses</h1>
+          <form>
+            <ul>
+              <label className="id" id="id">
+                EmployeeId
+              </label>
+              <> </>
+              <input
+                type="number"
+                className="id"
+                id="id"
+                value={employeeId}
+                onChange={(e) => setEmployeeId(e.target.value)}
+              ></input>
+            </ul>
+
+            <ul>
+              <label for="datetime" className="date" id="date">
+                DateOfRequest
+              </label>
+              <> </>
+              <input
+                type="datetime-local"
+                className="date"
+                id="date"
+                value={dateOfRequest}
+                onChange={(e) => setDateOfRequest(e.target.value)}
+              ></input>
+            </ul>
+
+            <ul>
+              {" "}
+              <label className="type" id="type">
+                ExpenseType
+              </label>
+              <> </>
+              <input
+                type="text"
+                className="type"
+                id="type"
+                value={expenseType}
+                onChange={(e) => setExpenseType(e.target.value)}
+              ></input>
+            </ul>
+
+            <ul>
+              <label className="desc" id="desc">
+                ExpenseDescription
+              </label>
+              <> </>
+              <input
+                type="text"
+                className="desc"
+                id="desc"
+                value={expenseDescription}
+                onChange={(e) => setExpenseDescription(e.target.value)}
+              ></input>
+            </ul>
+
+            <ul>
+              <label className="desc" id="desc">
+                Status
+              </label>
+              <> </>
+              <input
+                type="text"
+                className="desc"
+                id="desc"
+                value={status}
+                onChange={(e) => setStatus(e.target.value)}
+              ></input>
+            </ul>
+
+            <ul>
+              <label className="amt" id="amt">
+                Amount
+              </label>
+              <> </>
+              <input
+                type="number"
+                className="amt"
+                id="amt"
+                value={amount}
+                onChange={(e) => setAmount(e.target.value)}
+              ></input>
+            </ul>
+
+            <ul>
+              <label className="man" id="man">
+                ManagerName
+              </label>
+              <> </>
+              <input
+                type="text"
+                className="man"
+                id="man"
+                value={managerName}
+                onChange={(e) => setManagerName(e.target.value)}
+              ></input>
+            </ul>
+            <ul>
+              <label className="man" id="man">
+                ManagerId
+              </label>
+              <> </>
+              <input
+                type="text"
+                className="man"
+                id="man"
+                value={managerId}
+                onChange={(e) => setManagerId(e.target.value)}
+              ></input>
+            </ul>
+
+            <button
+              style={{
+                backgroundColor: "grey",
+                textAlign: "center",
+                fontWeight: "bold",
+              }}
+              type="submit"
+              onClick={handleSubmit}
+            >
+              Submit
+            </button>
+
+            {/* <label className="status" id="status">StatusOfRequest</label>
                     <input type="text" className="status" id="status"></input> */}
-                    
-                    
-                        
-                </div>
-
-            </div>
-            
-            </Layout>
-        </>
-    )
-}
+          </form>
+        </div>
+      </Layout>
+    </>
+  );
+};
 
 export default Expense;
