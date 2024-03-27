@@ -8,10 +8,9 @@ import About from "./pages/About";
 import Logout from "./pages/Logout";
 import Footer from "./pages/Footer";
 import Expense from "./pages/Employee/Expense";
-import ExpenseChart from './pages/Manager/ExpenseChart';
+import ExpenseChart from './pages/Manager/ExpenseTable';
 import ManHome from "./pages/Manager/ManHome";
 import ExpenseList from "./components/employee/ExpenseList";
-import NavbarMan from "./pages/Manager/NavbarMan";
 
 function App() {
   return (
@@ -29,7 +28,6 @@ function App() {
         <Route path="/managerhome" element={<ManHome />} />
         <Route path="/expenselist" element={<ExpenseList />} />
         <Route path="/expensechart" element={<ExpenseChart />} />
-        <Route path="/navbarman" element={<NavbarMan />} />
       </Routes>
     </Router>
   );

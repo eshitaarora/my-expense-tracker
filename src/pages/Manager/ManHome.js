@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import NavbarMan from './../Manager/NavbarMan';
 import Footer from './../Footer';
-import ExpenseChart from './ExpenseChart';
+import ExpenseChart from './ExpenseTable';
 import { Link } from 'react-router-dom';
 import './ManHome.css';
+import Navbar from '../Navbar';
 
 function ManHome() {
   return (
     <>
-      <NavbarMan></NavbarMan>
+      <Navbar />
       <div className="container mt-5">
         <p>Welcome to Expense Tracker Platform</p>
-        <Link  className="link" to="/ExpenseList">Manager Expenses</Link>
+        <Link  className="link" to="/ExpenseChart">Manager Expenses</Link>
       </div>
       <Footer></Footer>
     </>
