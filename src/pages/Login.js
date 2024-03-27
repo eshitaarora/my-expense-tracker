@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import { Link, Navigate, useNavigate } from "react-router-dom";
-import { useHistory } from "react-router-dom";
 import Layout from "../components/Layout";
 import "./Login.css";
  

@@ -12,6 +12,7 @@ import ExpenseChart from './pages/Manager/ExpenseTable';
 import ManHome from "./pages/Manager/ManHome";
 import ExpenseList from "./components/employee/ExpenseList";
 import Page404 from "./pages/Page404";
+import ExpenseTable from "./pages/Manager/ExpenseTable";
 
 function App() {
   return (
