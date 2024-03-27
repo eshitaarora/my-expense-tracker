@@ -45,7 +45,7 @@ const Expense = () => {
       <navbar></navbar>
       <Layout>
         <div className="row justify-content-md-center">
-          <h2>Add expenses</h2>
+          <h2>Add Expenses</h2>
           <form>
             <ul>
               <label className="id" id="id">
