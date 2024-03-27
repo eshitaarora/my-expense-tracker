@@ -1,52 +1,58 @@
 /* Overall table styling */
 table {
-    border-collapse: collapse; /* Ensure borders collapse properly */
-    width: 100%; /* Make table fill available width */
-    margin-bottom: 20px; /* Add some spacing below the table */
-  }
-  
-  /* Table header (thead) styling */
-  thead tr {
-    background-color: #ffffff; /* Dark gray background for header */
-    color: white; /* Text color white as requested */
-    text-align: center; /* Center text in header cells */
-    font-weight: bold; /* Make header text bold */
-  }
-  
-  th,h3,h1 {
-    padding: 10px; /* Add padding to header cells */
-    border: 1px solid #ccc; /* Add light gray border for cells */
-  }
-  
-  /* Table body (tbody) styling */
-  tbody tr {
-    border-bottom: 1px solid #ccc; /* Light gray border for each row */
-  }
-  
-  td {
-    padding: 10px; /* Add padding to body cells */
-  }
-  
-  /* Specific element styles */
-  .button {
-    background-color: #4CAF50; /* Green color for the button */
-    color: white; /* Text color white for the button */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  .button:hover {
-    background-color: #43A047; /* Darker green on hover */
-  }
-  
-  /* Edit icons (assuming they are images) */
-  img {
-    vertical-align: middle; /* Align images vertically within cells */
-  }
-  
-.th,h1,h3,thead{
-    color:#ffffff;
+  border-collapse: collapse; /* Ensure borders collapse properly */
+  width: 100%; /* Make table fill available width */
+  margin-bottom: 20px; /* Add some spacing below the table */
+}
+
+/* Table header (thead) styling */
+thead tr {
+  background-color: #ffffff; /* Dark gray background for header */
+  color: white; /* Text color white as requested */
+  text-align: center; /* Center text in header cells */
+  font-weight: bold; /* Make header text bold */
+}
+
+th,
+h3,
+h1 {
+  padding: 10px; /* Add padding to header cells */
+  border: 1px solid #ccc; /* Add light gray border for cells */
+}
+
+/* Table body (tbody) styling */
+tbody tr {
+  border-bottom: 1px solid #ccc; /* Light gray border for each row */
+}
+
+td {
+  padding: 10px; /* Add padding to body cells */
+  color: #ccc;
+}
+
+/* Specific element styles */
+.button {
+  background-color: #4caf50; /* Green color for the button */
+  color: white; /* Text color white for the button */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #43a047; /* Darker green on hover */
+}
+
+/* Edit icons (assuming they are images) */
+img {
+  vertical-align: middle; /* Align images vertically within cells */
+}
+
+.th,
+h1,
+h3,
+thead {
+  color: #ffffff;
 }

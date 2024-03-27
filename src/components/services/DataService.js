@@ -26,11 +26,20 @@ const addExpense = (expenseDetails) => {
   return axios.post(expenseUrl, expenseDetails);
 };
 
+const delExpense = (expenseid) => {
+  return axios.delete(`${expenseUrl}/${expenseid}`);
+};
+
+const editExpense = (expenseid) => {
+  return axios.put(`${expenseUrl}/${expenseid}`);
+};
 // more functions
 
 export {
   getAllExpenses,
+  delExpense,
   // getProductsWithPagination,
+  editExpense,
   getExpenseById,
   addExpense,
 };

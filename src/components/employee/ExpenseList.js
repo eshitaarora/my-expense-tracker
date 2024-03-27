@@ -6,8 +6,11 @@ import { Link } from "react-router-dom";
 import Navbar from "../../pages/Navbar";
 import Footer from "../../pages/Footer";
 import "./ExpenseList.css";
+import { getExpenseById } from "../services/DataService";
+import { delExpense } from "../services/DataService";
+import { editExpense } from "../services/DataService";
 
-const ExpenseList = () => {
+const ExpenseList = ({ id }) => {
   const [expenses, setExpense] = useState("");
 
   useEffect(() => {
@@ -121,119 +124,28 @@ const ExpenseList = () => {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td
-                  style={{
-                    border: "solid thin",
-                    color: "black",
-                    textAlign: "center",
-                  }}
-                >
-                  {" "}
-                  2{" "}
-                </td>
-                <td
-                  style={{
-                    border: "solid thin",
-                    color: "black",
-                    textAlign: "center",
-                  }}
-                >
-                  {" "}
-                  03/27/2024{" "}
-                </td>
-                <td
-                  style={{
-                    border: "solid thin",
-                    color: "black",
-                    textAlign: "center",
-                  }}
-                >
-                  {" "}
-                  Travel{" "}
-                </td>
-                <td
-                  style={{
-                    border: "solid thin",
-                    color: "black",
-                    textAlign: "center",
-                  }}
-                >
-                  {" "}
-                  vacation{" "}
-                </td>
-                <td
-                  style={{
-                    border: "solid thin",
-                    color: "black",
-                    textAlign: "center",
-                  }}
-                >
-                  {" "}
-                  pending{" "}
-                </td>
-                <td
-                  style={{
-                    border: "solid thin",
-                    color: "black",
-                    textAlign: "center",
-                  }}
-                >
-                  {" "}
-                  20,000{" "}
-                </td>
-                <td
-                  style={{
-                    border: "solid thin",
-                    color: "black",
-                    textAlign: "center",
-                  }}
-                >
-                  {" "}
-                  Snigdha{" "}
-                </td>
-                <td
-                  style={{
-                    border: "solid thin",
-                    color: "black",
-                    textAlign: "center",
-                  }}
-                >
-                  <img
-                    width="25"
-                    height="25"
-                    src="https://static-00.iconduck.com/assets.00/select-all-icon-512x512-wvy0ipfw.png"
-                  ></img>
-                  <br /> <br />
-                  <img
-                    width="25"
-                    height="25"
-                    src="https://cdn-icons-png.freepik.com/512/1345/1345874.png"
-                  ></img>
-                  <br /> <br />
-                </td>
-              </tr>
+              {console.log(expenses)}
+              {expenses &&
+                expenses.map((user) => (
+                  <tr key={user.expenseId}>
+                    <td>{user.expenseId}</td>
+                    <td>{user.dateOfRequest}</td>
+                    <td>{user.expenseType}</td>
+                    <td>{user.expenseDesciption}</td>
+                    <td>{user.status}</td>
+                    <td>{user.amount}</td>
+                    <td>{user.managerName}</td>
+                    <td>
+                      <button onClick={() => editExpense(user.expenseId)}>
+                        Update{" "}
+                      </button>
+                      <button onClick={() => delExpense(user.expenseId)}>
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
             </tbody>
-            {/* <tbody>
-            {console.log(expenses)}
-            {expenses &&
-              expenses.map((user) => (
-                <tr key={user.expenseId}>
-                  <td>{user.expenseId}</td>
-                  <td>{user.dateOfRequest}</td>
-                  <td>{user.expenseType}</td>
-                  <td>{user.expenseDesciption}</td>
-                  <td>{user.status}</td>
-                  <td>{user.amount}</td>
-                  <td>{user.managerName}</td>
-                  <td>
-                    <button>Update</button>
-                    <button>Delete</button>
-                  </td>
-                 
-                </tr>
-              ))}
-          </tbody> */}
           </table>
         </>
       </div>
