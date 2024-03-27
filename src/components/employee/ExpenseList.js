@@ -6,10 +6,30 @@ import { Link } from "react-router-dom";
 import Navbar from "../../pages/Navbar";
 import Footer from "../../pages/Footer";
 import "./ExpenseList.css";
+import SearchBar from "../../pages/Employee/SearchBar";
 
 const ExpenseList = () => {
   const [expenses, setExpense] = useState("");
-
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
+  const [filteredProducts, setFilteredProducts]=useState(expenses.products);
+  const handleSearch=(searchTerm)=>{
+    const filtered=filteredProducts.filter((product)=>product.title.toLowerCase().includes(searchTerm.toLowerCase()))
+    console.log(filtered)
+    setFilteredProducts(filtered)
+  }
+  const handleType=(filteredList)=>{
+      setFilteredProducts(filteredList)
+  }
+  const handleData=(newStartDate, newEndDate)=>{
+    setStartDate(newStartDate);
+    setEndDate(newEndDate)
+    if(filteredProducts){
+      const filtered=filteredProducts.filter((product)=>product.price>=startDate&&product.price<=endDate)
+      console.log(filtered)
+      setFilteredProducts(filtered)
+    }
+  } 
   useEffect(() => {
     getAllExpenses()
       .then((response) => {
@@ -25,6 +45,9 @@ const ExpenseList = () => {
       <Navbar />
       <div>
         <>
+        <div>
+        <SearchBar products={expenses.products} onSearch={handleSearch} onStateChange={handleData} onChangeType={handleType}/>
+      </div>
           <h2><title>Expense Details</title></h2>
         </>
         <>
