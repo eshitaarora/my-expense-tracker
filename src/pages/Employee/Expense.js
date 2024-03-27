@@ -2,6 +2,7 @@ import Navbar from "./../Navbar";
 import Footer from "./../Footer";
 import { addExpense } from "../../components/services/DataService";
 import { useState } from "react";
+import Layout from "../../components/Layout";
 
 const Expense = () => {
   const [employeeId, setEmployeeId] = useState("");
