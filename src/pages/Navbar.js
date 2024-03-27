@@ -19,21 +19,19 @@ function Navbar({ isRightSide = false }) {
   return (
     <nav className={`navbar navbar-expand-lg navbar-${isRightSide ? 'dark' : 'light'} bg-${isRightSide ? 'dark' : 'light'} fixed-top`}>
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">Expense Tracker</Link>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={toggleMenu}>
-          <span className="navbar-toggler-icon"></span>
-        </button>
+      <img src="https://logodownload.org/wp-content/uploads/2019/10/deloitte-logo-0.png" alt="React Image" className="photo" />
+  
+        <div className="navbar-brand" to="/">Expense Tracker</div>
         <div className={`collapse navbar-collapse ${menuClasses}`} id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
           <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+              <Link className="nav-link" to="/home">Home</Link>
             </li>
+
           <li className="nav-item">
               <Link className="nav-link" to="/about">About</Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/login">Login Again</Link>
-            </li>
+
             <li className="nav-item">
               <Link className="nav-link" to="/logout">Logout</Link>
             </li>

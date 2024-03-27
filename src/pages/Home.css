@@ -1,0 +1,32 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif; /* Set a default font if desired */
+  }
+  
+  .container {
+    /* Style the About page title */
+    text-align: center;
+    /* margin-bottom: -6rem; */
+    margin-top: 0rem;
+    margin-bottom: 20rem;
+  }
+  
+  /* Home content */
+  h1 {
+    margin-bottom: 1rem; /* Add some space after the heading */
+  }
+  
+  p {
+    line-height: 2; /* Adjust line spacing for readability */
+  }
+  
+  /* Footer (assuming styles are defined in a separate CSS file) */
+  /* ... Place your footer styles here ... */
+  
+  /* Additional styles (optional) */
+  .mt-5 { /* Assuming this is a custom class for margin-top spacing */
+    margin-top: 5rem;
+  }
+  

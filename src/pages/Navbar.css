@@ -1,15 +1,16 @@
 .navbar {
     left: 0; /* Position navbar to the left */
     width: 250px; /* Adjust width as needed */
-    height: 100vh; /* Full height of viewport */
+    height: 98vh; /* Full height of viewport */
     background-color: #000000; /* Light background color */
-    padding: 10px 20px; /* Add padding */
+    padding: 10px 10px; /* Add padding */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    position: fixed; bottom: 0; left: 0
   }
-   
   .navbar .navbar-brand {
     font-weight: bold; /* Adjust font weight for brand name */
-    color: #ffffff; /* Darker text color for brand name */
+    color: #67d75d; /* Darker text color for brand name */
+    font-size:large;
   }
    
   .navbar-nav {
@@ -19,9 +20,23 @@
    
   .nav-link {
     color: #ffffff; /* Darker text color for links */
+    margin: 20%;
     margin-bottom: 10px; /* Add spacing between links */
   }
    
   .nav-link:hover {
     color: #007bff; /* Accent color on hover */
   }
+  /* In your Navbar.css file */
+.nav-item {
+    margin: 25px; /* Adjust the margin size here */
+    position:relative;
+    font-size: 20px;
+  }
+
+  .photo {
+    margin-top: 0%;
+    height: 250px;
+    width: 250px; 
+    background-color: #ffffff;
+}
