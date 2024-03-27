@@ -2,137 +2,113 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
-const API_URL = process.env.REACT_APP_API_URL;
+import { addEmployee } from "../components/services/EmployeeDataService";
 
-function Register() {
-  const navigate = useNavigate();
-  const [name, setName] = useState("");
+const Register = () => {
+  const [employeeName, setEmployeeName] = useState("");
   const [designation, setDesignation] = useState("");
-  const [projectname, setProjectName] = useState("");
+  const [project, setProject] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [validationErrors, setValidationErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  // const [confirmPassword, setConfirmPassword] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const newEmployee = {
+      employeeName,
+      designation,
+      project,
+      password,
+    };
+    addEmployee(newEmployee)
+      .then((data) => {
+        console.log("Value stored successfully!", data);
+        // Handle any further actions after successful storage
+      })
+      .catch((error) => {
+        console.error("Error storing value:", error);
+        // Handle error case
+      });
+  };
 
   return (
-    <Layout>
-      <div className="row justify-content-md-center mt-5">
-        <div className="col-4">
-          <div className="card">
-            <div className="card-body">
-              <h5 className="card-title mb-4">Register</h5>
-              <form>
-                <div className="mb-3">
-                  <label htmlFor="name" className="form-label">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="name"
-                    name="name"
-                    value={name}
-                    onChange={(e) => {
-                      setName(e.target.value);
-                    }}
-                    placeholder="Enter Name"
-                  />
-                  {validationErrors.name != undefined && (
-                    <div className="flex flex-col">
-                      <small className="text-danger">
-                        {validationErrors.name[0]}
-                      </small>
-                    </div>
-                  )}
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="designation" className="form-label">
-                    Designation
-                  </label>
-                  <input
-                    type="designation"
-                    className="form-control"
-                    id="designation"
-                    name="designation"
-                    value={designation}
-                    onChange={(e) => {
-                      setDesignation(e.target.value);
-                    }}
-                    placeholder="Enter Designation"
-                  />
-                  {validationErrors.designation != undefined && (
-                    <div className="flex flex-col">
-                      <small className="text-danger">
-                        {validationErrors.designation[0]}
-                      </small>
-                    </div>
-                  )}
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="projectname" className="form-label">
-                    Project Name
-                  </label>
-                  <input
-                    type="projectname"
-                    className="form-control"
-                    id="projectname"
-                    name="projectname"
-                    value={projectname}
-                    onChange={(e) => {
-                      setProjectName(e.target.value);
-                    }}
-                    placeholder="Enter Project Name"
-                  />
-                  {validationErrors.projectname != undefined && (
-                    <div className="flex flex-col">
-                      <small className="text-danger">
-                        {validationErrors.projectname[0]}
-                      </small>
-                    </div>
-                  )}
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="password" className="form-label">
-                    Password
-                  </label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="password"
-                    name="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Enter password"
-                  />
-                  {validationErrors.password != undefined && (
-                    <div className="flex flex-col">
-                      <small className="text-danger">
-                        {validationErrors.password[0]}
-                      </small>
-                    </div>
-                  )}
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="confirm_password" className="form-label">
-                    Confirm Password
-                  </label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="confirm_password"
-                    name="confirm_password"
-                    value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)}
-                    placeholder="Confirm password"
-                  />
-                </div>
-              </form>
-            </div>
-          </div>
+    <>
+      <Layout>
+        <div className="row justify-content-md-center">
+          <h1>Register</h1>
+          <form>
+            <ul>
+              <label className="employeeName" id="id">
+                EmployeeName
+              </label>
+              <> </>
+              <input
+                type="text"
+                className="employeeName"
+                id="employeeName"
+                value={employeeName}
+                onChange={(e) => setEmployeeName(e.target.value)}
+              ></input>
+            </ul>
+
+            <ul>
+              <label className="designation" id="designation">
+                Designation
+              </label>
+              <> </>
+              <input
+                type="text"
+                className="designation"
+                id="designation"
+                value={designation}
+                onChange={(e) => setDesignation(e.target.value)}
+              ></input>
+            </ul>
+
+            <ul>
+              <label className="project" id="project">
+                Project
+              </label>
+              <> </>
+              <input
+                type="text"
+                className="project"
+                id="project"
+                value={project}
+                onChange={(e) => setProject(e.target.value)}
+              ></input>
+            </ul>
+
+            <ul>
+              <label className="password" id="password">
+                Password
+              </label>
+              <> </>
+              <input
+                type="password"
+                className="password"
+                id="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              ></input>
+            </ul>
+
+            <button
+              style={{
+                backgroundColor: "grey",
+                textAlign: "center",
+                fontWeight: "bold",
+              }}
+              type="submit"
+              onClick={handleSubmit}
+            >
+              Submit
+            </button>
+          </form>
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    </>
   );
-}
+};
 
 export default Register;
