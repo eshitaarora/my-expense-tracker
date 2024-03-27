@@ -79,6 +79,7 @@ const Login = () => {
   };
 
   return (
+    <>
     <form onSubmit={handleFormSubmit}>
       <input
         type="text"
@@ -109,6 +110,7 @@ const Login = () => {
       />
       <button type="submit">Login</button>
     </form>
+    </>
   );
 };
  
