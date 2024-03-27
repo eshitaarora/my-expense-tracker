@@ -9,8 +9,33 @@ import "./ExpenseList.css";
 import { getExpenseById, delExpense } from "../services/DataService";
 
 const ExpenseList = () => {
+<<<<<<< HEAD
   const [expenses, setExpenses] = useState("");
 
+=======
+  const [expenses, setExpense] = useState("");
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
+  const [filteredExpenses, setFilteredExpenses]=useState(expenses);
+  console.log(expenses)
+  const handleSearch=(searchTerm)=>{
+    const filtered=filteredExpenses.filter((expense)=>expense.title.toLowerCase().includes(searchTerm.toLowerCase()))
+    console.log(filtered)
+    setFilteredExpenses(filtered)
+  }
+  const handleType=(filteredList)=>{
+      setFilteredExpenses(filteredList)
+  }
+  const handleData=(newStartDate, newEndDate)=>{
+    setStartDate(newStartDate);
+    setEndDate(newEndDate)
+    if(filteredExpenses){
+      const filtered=filteredExpenses.filter((expense)=>expense.DateOfRequest>=startDate&&expense.DateOfRequest<=endDate)
+      console.log(filtered)
+      setFilteredExpenses(filtered)
+    }
+  } 
+>>>>>>> 79389c637a0d0376c1c2ae3d35830210b7b5b7b2
   useEffect(() => {
     let userId = localStorage.getItem("employeeId");
     getExpenseById(userId)
@@ -28,9 +53,16 @@ const ExpenseList = () => {
       <Navbar />
       <div>
         <>
+<<<<<<< HEAD
           <h2>
             <title>Expense Details</title>
           </h2>
+=======
+        <div>
+        <SearchBar expenses={expenses} onSearch={handleSearch} onStateChange={handleData} onChangeType={handleType}/>
+      </div>
+          <h2><title>Expense Details</title></h2>
+>>>>>>> 79389c637a0d0376c1c2ae3d35830210b7b5b7b2
         </>
         <>
           <h2>EXPENSE DETAILS</h2>

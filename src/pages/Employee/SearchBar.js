@@ -4,13 +4,13 @@ import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.module.css";
 import "./SearchBar.css";
 
-const SearchBar = ({ products, onSearch, onStateChange, onChangeType }) => {
+const SearchBar = ({ expenses, onSearch, onStateChange, onChangeType }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
-  const [selectedCategory, setSelectedCategory] = useState();
+  const [selectedExpenseType, setSelectedExpenseType] = useState();
 
-  const filteredList = products && products.filter((item) => item.category === selectedCategory);
+  const filteredList = expenses && expenses.filter((item) => item.expenseType === selectedExpenseType);
 
   const handleType = () => {
     onChangeType(filteredList);
@@ -51,11 +51,13 @@ const SearchBar = ({ products, onSearch, onStateChange, onChangeType }) => {
             placeholderText="Select end date"
             className="date-picker"
           />
-      <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="category-select">
+      <select value={selectedExpenseType} onChange={(e) => setSelectedExpenseType(e.target.value)} className="category-select">
         <option value="">All</option>
-        <option value="smartphones">Smartphones</option>
-        <option value="laptops">Laptops</option>
-        <option value="fragrances">Fragrances</option>
+        <option value="travel">Travel</option>
+        <option value="food">Food</option>
+        <option value="health">Health/Medical</option>
+        <option value="accessories">Accessories</option>
+        <option value="miscellaneous">Miscellaneous</option>
       </select>
       <button onClick={handleType} className="type-button">
         Search Type
