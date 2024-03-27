@@ -14,12 +14,12 @@ const Expense = () => {
   const [managerName, setManagerName] = useState("");
   const [managerId, setManagerId] = useState("");
   const [status, setStatus] = useState("");
-  const [expenseId, setExpenseId] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const expenseDetails = {
+      employeeId,
       dateOfRequest,
       expenseType,
       expenseDescription,
@@ -79,7 +79,10 @@ const Expense = () => {
               <div className="row">
                 <div className="form-group col-sm-12">
                   <label htmlFor="Type">ExpenseType</label>
-                  <select>
+                  <select
+                    value={expenseType}
+                    onChange={(e) => setExpenseType(e.target.value)}
+                  >
                     <option>ChooseType</option>
                     <option>Travel</option>
                     <option>Food</option>

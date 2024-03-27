@@ -4,51 +4,10 @@ import { Link, useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import "./Login.css";
 
-const API_URL = process.env.REACT_APP_API_URL;
-
 function Login() {
   const navigate = useNavigate();
   const [id, setID] = useState("");
   const [password, setPassword] = useState("");
-  const [validationErrors, setValidationErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  useEffect(() => {
-    if (
-      localStorage.getItem("token") != "" &&
-      localStorage.getItem("token") != null
-    ) {
-      // navigate("/dashboard");
-    }
-    console.log(localStorage.getItem("token"));
-  }, []);
-
-  const loginAction = (e) => {
-    console.log(`${API_URL}`);
-    setValidationErrors({});
-    e.preventDefault();
-    setIsSubmitting(true);
-    let payload = {
-      id: id,
-      password: password,
-    };
-    axios
-      .post(`${API_URL}auth/signin`, payload)
-      .then((r) => {
-        setIsSubmitting(false);
-        localStorage.setItem("token", r.data.token);
-        // navigate("/dashboard");
-      })
-      .catch((e) => {
-        setIsSubmitting(false);
-        if (e.response.data.errors != undefined) {
-          setValidationErrors(e.response.data.errors);
-        }
-        if (e.response.data.error != undefined) {
-          setValidationErrors(e.response.data.error);
-        }
-      });
-  };
 
   return (
     <Layout>
