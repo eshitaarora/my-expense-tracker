@@ -5,6 +5,7 @@ import { getAllExpenses } from "../services/DataService";
 import { Link } from "react-router-dom";
 import Navbar from "../../pages/Navbar";
 import Footer from "../../pages/Footer";
+import './ExpenseList.css';
  
 // import { setProductListObj } from "./redux/ProductSlice";
  
@@ -26,10 +27,9 @@ const ExpenseList = () => {
     <Navbar />
     <div>
       <>
-        <title>Expense Details</title>
-      </>
-      <>
-        <h3>EXPENSE DETAILS</h3>
+        <h2>EXPENSE DETAILS</h2>
+
+        <input type="button" class="button" value="Add Product" /> 
        
         <table border="2" width="500" cellspacing="5" cellpadding="25" align="center">
           <thead>

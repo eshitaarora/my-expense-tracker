@@ -1,8 +1,8 @@
 .navbar {
     left: 0; /* Position navbar to the left */
     width: 250px; /* Adjust width as needed */
-    height: 98vh; /* Full height of viewport */
-    background-color: #454242; /* Light background color */
+    height: 99vh; /* Full height of viewport */
+    background-color: #40423f; /* Light background color */
     padding: 10px 10px; /* Add padding */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
     position: fixed; bottom: 0; left: 0
@@ -21,11 +21,12 @@
   .nav-link {
     display: inline-block; /* Allow buttons to sit side-by-side */
     padding: 0.5rem 1rem; /* Add some padding */
-    border: none; /* Remove default border */
+    border: black; /* Remove default border */
     border-radius: 4px; /* Add some rounded corners */
     cursor: pointer; /* Indicate clickable behavior */
     text-decoration: none; /* Remove underline from links */
-    color: inherit; /* Inherit color from parent element */ /* Adjust as needed */
+    color: #ffffff; /* Inherit color from parent element */ /* Adjust as needed */
+
   }
    
   .nav-link:hover {
@@ -38,11 +39,12 @@
     font-size: 20px;
   }
   .photo {
-    margin-top: 4%;
-    margin-left: 0%;
+    margin-top: 5%;
+    margin-left: 1%;
+    margin-right: 0%;
     height: 50px;
     width: 250px; 
-    background-color: #ffffff;
+    background-color: #40423f;
 }
 /* Navbar.css */
 
@@ -50,9 +52,10 @@
   display: inline-block; /* Allow buttons to sit side-by-side */
   padding: 10px 20px; /* Adjust padding for desired button size */
   margin: 20px 20px;; /* Add some margin for spacing */
+  margin-left: 0%;
   border: 1px solid #000000; /* Remove default button border */
   border-radius: 20px; /* Add rounded corners for a button-like look */
-  background-color: #ffffff; /* Set white background color */
+  background-color: #41913a; /* Set white background color */
   color: #333; /* Set text color (adjust as needed) */
   font-size: 20px;
   font-weight: bold;

@@ -10,7 +10,7 @@ function About() {
 <div className="about-page">
 <div className="navbar-brand" to="/">Expense Tracker</div>
 <div className="content-full">
-  <h1 className="about-title">About Your Expense Tracker</h1>
+  <h2 className="about-title">About Your Expense Tracker</h2>
   <div className="about-content">
   <p>
             This expense tracker app is designed to help you manage your finances effectively. 

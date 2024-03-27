@@ -1,6 +1,6 @@
 body{
   font-family: 'Trebuchet MS';
-  background: linear-gradient(to right, #bdf1b5, #56b148);
+  background: linear-gradient(to right, #000000, #000000);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,6 +26,7 @@ body{
   margin-bottom: 1rem;
   font-size: 1.5rem;
   font-weight: bold;
+  color:#000000;
 }
 form {
   width: 100%;
@@ -34,19 +35,21 @@ form {
 .form-label {
   margin-bottom: 0.5rem;
   font-weight: bold;
+  color:#000000;
 }
 
 .form-control {
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   border-radius: 5px;
   margin-bottom: 1rem;
+  color:#000000;
 }
 
 .btn-primary {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #c7ffd9;
+  color: #000000;
   border: none;
   padding: 0.8rem 1.5rem;
   border-radius: 5px;
@@ -55,7 +58,7 @@ form {
 }
 
 .btn-primary:hover {
-  background-color: #0062cc;
+  background-color: #173515;
 }
 .text-danger {
   color: #dc3545;

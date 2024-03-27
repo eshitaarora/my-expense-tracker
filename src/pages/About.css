@@ -2,6 +2,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-size: medium;
   font-family: monospace; /* Set a default font if desired */
 }
 
@@ -9,22 +10,24 @@ body {
 .about-page {
   max-width: 700px; /* Adjust as needed for content width */
   margin: 0 auto; /* Center the container horizontally */
-  padding: 2rem; /* Add some padding for visual spacing */
+  padding: 0rem; /* Add some padding for visual spacing */
 }
 
 /* About content */
 .about-title {
   margin-bottom: 1rem; /* Add some space after the heading */
   font-size: 1.5rem; /* Adjust heading size as needed */
+  color:#ffffff;
 }
 
 .about-content {
   line-height: 1.5; /* Adjust line spacing for readability */
+  color: #ffffff;
 }
 
 .navbar-brand {
   margin-top: 0%;
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
