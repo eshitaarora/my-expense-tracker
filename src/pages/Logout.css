@@ -1,5 +1,6 @@
 /* Overall container styling */
 .container {
+  font-family: 'monospace';
     text-align: center; /* Center content horizontally */
   }
   

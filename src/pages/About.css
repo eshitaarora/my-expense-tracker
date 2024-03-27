@@ -11,6 +11,7 @@ body {
   max-width: 700px; /* Adjust as needed for content width */
   margin: 0 auto; /* Center the container horizontally */
   padding: 0rem; /* Add some padding for visual spacing */
+  font-family: monospace;
 }
 
 /* About content */
@@ -18,17 +19,20 @@ body {
   margin-bottom: 1rem; /* Add some space after the heading */
   font-size: 1.5rem; /* Adjust heading size as needed */
   color:#ffffff;
+  font-family: monospace;
 }
 
 .about-content {
   line-height: 1.5; /* Adjust line spacing for readability */
   color: #ffffff;
+  font-family: monospace;
 }
 
 .navbar-brand {
   margin-top: 0%;
   font-size: 3rem;
   font-weight: bold;
+  font-family: monospace;
 }
 
 .about-features {
@@ -36,12 +40,14 @@ body {
   list-style: disc; /* Set list style (bullets) */
   padding-left: 1rem; /* Indent list items */
   margin-top: 0rem;
-    margin-bottom: 20rem;
+  margin-bottom: 20rem;
+  font-family: monospace;
 
 }
 
 .about-features li {
   margin-bottom: 1rem; /* Add space between list items */
+  font-family: monospace;
 }
 
 /* Footer (assuming styles are defined in a separate CSS file) */

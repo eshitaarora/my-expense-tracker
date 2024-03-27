@@ -25,10 +25,10 @@ const ExpenseList = () => {
       <Navbar />
       <div>
         <>
-          <title>Expense Details</title>
+          <h2><title>Expense Details</title></h2>
         </>
         <>
-          <h3>EXPENSE DETAILS</h3>
+          <h2>EXPENSE DETAILS</h2>
 
           <table
             border="2"
