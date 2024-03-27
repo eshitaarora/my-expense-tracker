@@ -12,22 +12,23 @@ const ExpenseList = () => {
   const [expenses, setExpense] = useState("");
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
-  const [filteredProducts, setFilteredProducts]=useState(expenses.products);
+  const [filteredExpenses, setFilteredExpenses]=useState(expenses);
+  console.log(expenses)
   const handleSearch=(searchTerm)=>{
-    const filtered=filteredProducts.filter((product)=>product.title.toLowerCase().includes(searchTerm.toLowerCase()))
+    const filtered=filteredExpenses.filter((expense)=>expense.title.toLowerCase().includes(searchTerm.toLowerCase()))
     console.log(filtered)
-    setFilteredProducts(filtered)
+    setFilteredExpenses(filtered)
   }
   const handleType=(filteredList)=>{
-      setFilteredProducts(filteredList)
+      setFilteredExpenses(filteredList)
   }
   const handleData=(newStartDate, newEndDate)=>{
     setStartDate(newStartDate);
     setEndDate(newEndDate)
-    if(filteredProducts){
-      const filtered=filteredProducts.filter((product)=>product.price>=startDate&&product.price<=endDate)
+    if(filteredExpenses){
+      const filtered=filteredExpenses.filter((expense)=>expense.DateOfRequest>=startDate&&expense.DateOfRequest<=endDate)
       console.log(filtered)
-      setFilteredProducts(filtered)
+      setFilteredExpenses(filtered)
     }
   } 
   useEffect(() => {
@@ -46,7 +47,7 @@ const ExpenseList = () => {
       <div>
         <>
         <div>
-        <SearchBar products={expenses.products} onSearch={handleSearch} onStateChange={handleData} onChangeType={handleType}/>
+        <SearchBar expenses={expenses} onSearch={handleSearch} onStateChange={handleData} onChangeType={handleType}/>
       </div>
           <h2><title>Expense Details</title></h2>
         </>
