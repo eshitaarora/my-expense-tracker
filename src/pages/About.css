@@ -1,24 +1,58 @@
+/* General styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: monospace; /* Set a default font if desired */
+}
+
+/* Container */
 .about-page {
-  /* Style the overall About page container */
-  padding: 0rem;
-  margin: 0rem ;
-  max-width: 900px; /* Adjust width as needed */
+  max-width: 700px; /* Adjust as needed for content width */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 2rem; /* Add some padding for visual spacing */
 }
- 
+
+/* About content */
 .about-title {
-  /* Style the About page title */
-  text-align: center;
-  /* margin-bottom: -6rem; */
-  margin-top: 2rem;
+  margin-bottom: 1rem; /* Add some space after the heading */
+  font-size: 1.5rem; /* Adjust heading size as needed */
 }
- 
-.about-features {
-  /* Style the features list */
-  list-style: disc;
-  padding-left: 1rem;
-  margin-bottom: 1rem;
-}
+
 .about-content {
-  /* Style the About page title */
-  margin-bottom: 10rem;
+  line-height: 1.5; /* Adjust line spacing for readability */
 }
+
+.navbar-brand {
+  margin-top: 0%;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.about-features {
+  display:block;
+  list-style: disc; /* Set list style (bullets) */
+  padding-left: 1rem; /* Indent list items */
+  margin-top: 0rem;
+    margin-bottom: 20rem;
+
+}
+
+.about-features li {
+  margin-bottom: 1rem; /* Add space between list items */
+}
+
+/* Footer (assuming styles are defined in a separate CSS file) */
+/* ... Place your footer styles here ... */
+
+/* Media queries (optional) */
+/* @media (max-width: 768px) {
+  .about-page {
+    max-width: 70%; 
+  }
+  .about-title {
+    font-size: 1.2rem;  */
+
+  /* .content-full {
+    margin-bottom: 200rem ;
+  } */
+

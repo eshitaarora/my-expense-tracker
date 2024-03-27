@@ -2,25 +2,31 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-// import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 import Navbar from "./pages/Navbar";
-import ExpenseList from "./components/employee/ExpenseList";
+import About from "./pages/About";
+import Logout from "./pages/Logout";
+import Footer from "./pages/Footer";
 import Expense from "./pages/Employee/Expense";
-import EmployeeList from "./pages/EmployeesList";
+// import ExpenseChart from './pages/Manager/ExpenseChart';
+import ManHome from "./pages/Manager/ManHome";
+import ExpenseList from "./components/employee/ExpenseList";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route exact path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        {/* <Route path="/dashboard" element={<Dashboard />} /> */}
         <Route path="/home" element={<Home />} />
         <Route path="/navbar" element={<Navbar />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/logout" element={<Logout />} />
+        <Route path="/footer" element={<Footer />} />
+        <Route path="/expense" element={<Expense />} />
+        <Route path="/managerhome" element={<ManHome />} />
         <Route path="/expenselist" element={<ExpenseList />} />
-        <Route path="/newexpense" element={<Expense />} />
-        <Route path="/employees" element={<EmployeeList />} />
       </Routes>
     </Router>
   );

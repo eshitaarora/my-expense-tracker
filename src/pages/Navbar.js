@@ -19,21 +19,25 @@ function Navbar({ isRightSide = false }) {
   return (
     <nav className={`navbar navbar-expand-lg navbar-${isRightSide ? 'dark' : 'light'} bg-${isRightSide ? 'dark' : 'light'} fixed-top`}>
       <div className="container-fluid">
-      <img src="https://logodownload.org/wp-content/uploads/2019/10/deloitte-logo-0.png" alt="React Image" className="photo" />
-  
-        <div className="navbar-brand" to="/">Expense Tracker</div>
+      <img src="https://logos-download.com/wp-content/uploads/2016/10/Deloitte_logo_black.png" alt="React Image" className="photo" />
         <div className={`collapse navbar-collapse ${menuClasses}`} id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li className="nav-item">
-              <Link className="nav-link" to="/home">Home</Link>
+          <li className="nav-button">
+          <span>
+            <Link className="nav-link" to="/home">Home</Link>
+            </span>
             </li>
 
-          <li className="nav-item">
-              <Link className="nav-link" to="/about">About</Link>
+          <li className="nav-button">
+          <span>
+            <Link className="nav-link" to="/about">About</Link>
+            </span>
             </li>
 
-            <li className="nav-item">
-              <Link className="nav-link" to="/logout">Logout</Link>
+            <li className="nav-button">
+            <span>
+            <Link className="nav-link" to="/logout">Logout</Link>
+            </span>
             </li>
           </ul>
         </div>
