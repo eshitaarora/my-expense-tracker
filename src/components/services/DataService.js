@@ -22,7 +22,9 @@ const getExpenseById = (employeeId) => {
   return axios.get(`${expenseUrl}/${employeeId}`);
 };
 
-const addExpense = () => {};
+const addExpense = (expenseDetails) => {
+  return axios.post(expenseUrl, expenseDetails);
+};
 
 // more functions
 
