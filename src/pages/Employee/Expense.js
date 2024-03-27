@@ -2,7 +2,7 @@ import Navbar from "./../Navbar";
 import { addExpense } from "../../components/services/DataService";
 import { useState } from "react";
 import Layout from "../../components/Layout";
-
+import './Expense.css';
 import Footer from "./../Footer";
 
 const Expense = () => {
