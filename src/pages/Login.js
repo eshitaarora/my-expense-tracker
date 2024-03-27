@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useHistory } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import "./Login.css";
 
@@ -10,7 +10,6 @@ const Login = () => {
     employeeId: "",
     password: "",
   });
-  const [id, setId] = useState(null);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -27,17 +26,10 @@ const Login = () => {
         `http://localhost:64125/api/TblEmployees/${credentials.employeeId}`,
         credentials
       );
-
-      localStorage.setItem("employeeId", JSON.stringify(response.data["id"]));
-
-      const { id } = response.data;
-      console.log(id);
-      setId(id);
-
       const { designation } = response.data;
       if (designation === "Manager") {
         // Redirect to the admin page
-        window.location.href = "/managerHome";
+        window.location.href = "/managerhome";
       } else {
         // Redirect to the employee expenses page
         window.location.href = "/expenselist";
@@ -49,21 +41,29 @@ const Login = () => {
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
-      <input
-        type="text"
-        name="employeeId"
-        value={credentials.employeeId}
-        onChange={handleInputChange}
-      />
-      <input
-        type="password"
-        name="password"
-        value={credentials.password}
-        onChange={handleInputChange}
-      />
-      <button type="submit">Login</button>
-    </form>
+    <>
+      <form onSubmit={handleFormSubmit}>
+        <label htmlFor="employeeId">EmployeeId:</label>
+        <input
+          type="text"
+          name="employeeId"
+          value={credentials.employeeId}
+          onChange={handleInputChange}
+          placeholder="Employee ID" // Add placeholder here
+        />
+        <label htmlFor="password">Password:</label>
+        <input
+          type="password"
+          name="password"
+          value={credentials.password}
+          onChange={handleInputChange}
+          placeholder="Password" // Add placeholder here
+        />
+        <button type="submit" className="button">
+          Login
+        </button>
+      </form>
+    </>
   );
 };
 

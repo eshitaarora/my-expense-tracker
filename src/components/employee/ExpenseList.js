@@ -6,11 +6,9 @@ import { Link } from "react-router-dom";
 import Navbar from "../../pages/Navbar";
 import Footer from "../../pages/Footer";
 import "./ExpenseList.css";
-import { getExpenseById } from "../services/DataService";
-import { delExpense } from "../services/DataService";
-import { editExpense } from "../services/DataService";
+import { getExpenseById, delExpense } from "../services/DataService";
 
-const ExpenseList = ({ id }) => {
+const ExpenseList = () => {
   const [expenses, setExpenses] = useState("");
 
   useEffect(() => {
