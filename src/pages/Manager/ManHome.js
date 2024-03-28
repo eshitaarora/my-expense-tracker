@@ -9,12 +9,14 @@ import Navbar from "../Navbar";
 function ManHome() {
   return (
     <>
+    <div className="contain1">
       <Navbar />
       <div className="container mt-5">
-        <p>Welcome to Expense Tracker Platform</p>
-        <Link className="link" to="/ExpenseTable">
+        <h2>Welcome to Expense Tracker Platform</h2>
+        <button className="button10"><Link className="link" to="/ExpenseTable" style={{textDecoration:'none', color: 'white'}}>
           Manager Expenses
-        </Link>
+        </Link></button>
+      </div>
       </div>
       <Footer></Footer>
     </>

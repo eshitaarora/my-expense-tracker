@@ -14,8 +14,7 @@ thead tr {
 }
 
 th,
-h3,
-h1 {
+h3 {
   padding: 10px; /* Add padding to header cells */
   border: 1px solid #ccc; /* Add light gray border for cells */
 }
