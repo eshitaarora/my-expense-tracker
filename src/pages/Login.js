@@ -43,8 +43,11 @@ const Login = () => {
 
   return (
     <>
-      <form onSubmit={handleFormSubmit}>
-        <label htmlFor="employeeId">EmployeeId:</label>
+      <div className="card1">
+                        <div className="card-body"></div>
+<form onSubmit={handleFormSubmit}>
+<h5 className="card-login">Sign In</h5>
+        <label htmlFor="employeeId"><b>EmployeeId</b></label>
         <input
           type="text"
           name="employeeId"
@@ -52,7 +55,7 @@ const Login = () => {
           onChange={handleInputChange}
           placeholder="Employee ID" // Add placeholder here
         />
-        <label htmlFor="password">Password:</label>
+        <label htmlFor="password"><b>Password</b></label>
         <input
           type="password"
           name="password"
@@ -64,6 +67,10 @@ const Login = () => {
           Login
         </button>
       </form>
+      <div >
+                                    <p className="text-center">Don't have account? <Link to="/register">Register here</Link></p>
+                                </div>
+     </div>
     </>
   );
 };

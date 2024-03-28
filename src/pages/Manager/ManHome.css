@@ -29,3 +29,21 @@ body {
     color:#000000;
     font-weight: bold;
 }
+.button10{
+  display: inline-block; /* Allow buttons to sit side-by-side */
+  padding: 10px 20px; /* Adjust padding for desired button size */
+  margin: 20px 20px;; /* Add some margin for spacing */
+  margin-left: 0%;
+  border: 1px solid #000000; /* Remove default button border */
+  border-radius: 10px; /* Add rounded corners for a button-like look */
+  background-color: #41913a; /* Set white background color */
+  color: #ffffff; /* Set text color (adjust as needed) */
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none; /* Remove underline from links */
+  cursor: pointer; /* Indicate clickable behavior with hover effect */
+  transition: background-color 0.2s ease-in-out; /* Smooth transition on hover */
+}
+.contain1{
+  margin-left: 200px;
+}

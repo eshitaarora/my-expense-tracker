@@ -1,66 +1,47 @@
-/* General styles */
-body {
-  margin: 0;
-  padding: 0;
-  font-size: medium;
-  font-family: monospace; /* Set a default font if desired */
-}
-
-/* Container */
 .about-page {
-  max-width: 700px; /* Adjust as needed for content width */
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 0rem; /* Add some padding for visual spacing */
-  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
-
-/* About content */
-.about-title {
-  margin-bottom: 1rem; /* Add some space after the heading */
-  font-size: 1.5rem; /* Adjust heading size as needed */
-  color:#000000;
-  font-family: monospace;
-}
-
-.about-content {
-  line-height: 1.5; /* Adjust line spacing for readability */
-  color: #000000;
-  font-family: monospace;
-}
-
-.navbar-brand {
-  margin-top: 0%;
-  font-size: 3rem;
+ 
+.navbar-brand2 {
+  font-size: 24px;
   font-weight: bold;
-  font-family: monospace;
+  margin-bottom: 10px;
+  margin-left: 200px;
+  font-weight: bold; /* Adjust font weight for brand name */
+  color: #41913a; /* Darker text color for brand name */
+  font-size:75px;
+  text-align: center;
 }
-
+ 
+.about-content {
+  max-width: 600px;
+  text-align: justify;
+  margin-left: 200px;
+}
+ 
+.about-description {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: justify;
+  margin-left: 200px;
+}
+ 
+.about-features-heading {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: justify;
+  margin-left: 50px;
+}
+ 
 .about-features {
-  display:block;
-  list-style: disc; /* Set list style (bullets) */
-  padding-left: 1rem; /* Indent list items */
-  margin-top: 0rem;
-  margin-bottom: 20rem;
-  font-family: monospace;
-
+  margin-right: 200px;
+  margin-bottom: 50px;
 }
-
-.about-features li {
-  margin-bottom: 1rem; /* Add space between list items */
-  font-family: monospace;
+ 
+.about-get-started {
+  font-size: 18px;
 }
-
-/* Footer (assuming styles are defined in a separate CSS file) */
-/* ... Place your footer styles here ... */
-
-/* Media queries (optional) */
-/* @media (max-width: 768px) {
-  .about-page {
-    max-width: 70%; 
-  }
-  .about-title {
-    font-size: 1.2rem;  */
-
-  /* .content-full {
-    margin-bottom: 200rem ;
-  } */

@@ -3,6 +3,9 @@ body {
     padding: 0;
     font-family: monospace; /* Set a default font if desired */
   }
+  .contain{
+    margin-left: 200px;
+  }
   .container .mt-5{
     max-width: 700px; /* Adjust as needed for content width */
   margin: 0 auto; /* Center the container horizontally */
@@ -14,27 +17,32 @@ body {
     font-size: 3rem;
     font-weight: bolder;
     font-family: monospace;
-    color: rgb(0, 0, 0);
+    color: #000000;
   }
 .expense-image {
-  width: 250px; /* Adjust width as desired */
-  height: 200px; /* Adjust height as desired */
+  width: 400px; /* Adjust width as desired */
+  height: 300px; /* Adjust height as desired */
   object-fit: cover; /* Optional: Scale image to fit container */
-  margin-left: -50%;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: -400px;
 }
-.expense-image1 {
-  width: 250px; /* Adjust width as desired */
-  height: 200px; /* Adjust height as desired */
-  object-fit: cover; /* Optional: Scale image to fit container */
-  margin-left: 100%;
-  margin-top: -25%;
+.link{
+  color:#000000;
+  font-weight: bold;
 }
-.expense-image2 {
-  width: 250px; /* Adjust width as desired */
-  height: 200px; /* Adjust height as desired */
-  object-fit: cover; /* Optional: Scale image to fit container */
-  margin-left: 10%;
-  margin-top: -25%;
-  margin-right: -40%;
-  margin-bottom: 50%;
+.button2{
+display: inline-block; /* Allow buttons to sit side-by-side */
+padding: 10px 20px; /* Adjust padding for desired button size */
+margin: 50px 20px; /* Add some margin for spacing */
+margin-left: 0%;
+border: 1px solid #000000; /* Remove default button border */
+border-radius: 10px; /* Add rounded corners for a button-like look */
+background-color: #86BC25; /* Set white background color */
+color: #ffffff; /* Set text color (adjust as needed) */
+font-size: 20px;
+font-weight: bold;
+text-decoration: none; /* Remove underline from links */
+cursor: pointer; /* Indicate clickable behavior with hover effect */
+transition: background-color 0.2s ease-in-out; /* Smooth transition on hover */
 }
