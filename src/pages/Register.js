@@ -45,6 +45,7 @@ const Register = () => {
               </label>
               <> </>
               <input
+                aria-required
                 type="text"
                 className="employeeName"
                 id="employeeName"
@@ -62,6 +63,7 @@ const Register = () => {
                 type="text"
                 className="designation"
                 id="designation"
+                required
                 value={designation}
                 onChange={(e) => setDesignation(e.target.value)}
               ></input>
@@ -76,6 +78,7 @@ const Register = () => {
                 type="text"
                 className="project"
                 id="project"
+                required
                 value={project}
                 onChange={(e) => setProject(e.target.value)}
               ></input>
@@ -87,6 +90,7 @@ const Register = () => {
               </label>
               <> </>
               <input
+                aria-required
                 type="password"
                 className="password"
                 id="password"

@@ -69,7 +69,7 @@ const ExpenseTable = () => {
         <div>
           <input
             type="text"
-            placeholder="Search by Expense Type or Id"
+            placeholder="Search by Expense Type or Date"
             value={searchTerm}
             onChange={handleSearchChange}
           />

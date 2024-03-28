@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import "./ExpenseList.css";
-import SearchBar from "./SearchBar";
 import {
   getExpenseById,
   delExpense,

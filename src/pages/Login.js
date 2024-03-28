@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
+import { useHistory, useNavigation } from "react-router-dom";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import "./Login.css";
+import { useAuth } from "./AuthContext";
 
 const Login = () => {
   const [credentials, setCredentials] = useState({
     employeeId: "",
     password: "",
   });
+
+  // const auth = useAuth();
+  const navigate = useNavigate();
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -26,14 +30,17 @@ const Login = () => {
         `http://localhost:64125/api/TblEmployees/${credentials.employeeId}`,
         credentials
       );
+      // auth.login(response.data);
+
       const { designation } = response.data;
       localStorage.setItem("employeeId", response.data["id"]);
       if (designation === "Manager") {
+        navigate("/managerhome");
         // Redirect to the admin page
-        window.location.href = "/managerhome";
+        // window.location.href = "/managerhome";
       } else {
         // Redirect to the employee expenses page
-        window.location.href = "/expenselist";
+        navigate("/expenselist");
       }
     } catch (error) {
       console.error(error);

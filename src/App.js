@@ -12,7 +12,6 @@ import ManHome from "./pages/Manager/ManHome";
 import ExpenseList from "./pages/Employee/ExpenseList";
 import Page404 from "./pages/Page404";
 import ExpenseTable from "./pages/Manager/ExpenseTable";
-import SearchBar from "./pages/Employee/SearchBar";
 import UpdateExpense from "./pages/Employee/UpdateExpense";
 
 function App() {
@@ -31,7 +30,7 @@ function App() {
         <Route path="/managerhome" element={<ManHome />} />
         <Route path="/expenselist" element={<ExpenseList />} />
         <Route path="/expensetable" element={<ExpenseTable />} />
-        <Route path="/searchbar" element={<SearchBar />} />
+        {/* <Route path="/searchbar" element={<SearchBar />} /> */}
         <Route
           exact
           path="/updateExpense/:expenseId"
