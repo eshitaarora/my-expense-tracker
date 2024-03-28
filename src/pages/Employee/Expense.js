@@ -36,6 +36,7 @@ const Expense = () => {
         // Handle any further actions after successful storage
       })
       .catch((error) => {
+        alert("Enter Valid Details");
         console.error("Error storing value:", error);
         // Handle error case
       });
