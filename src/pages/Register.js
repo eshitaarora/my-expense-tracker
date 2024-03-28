@@ -36,7 +36,7 @@ const Register = () => {
   return (
     <>
       <Layout>
-        <div className="row justify-content-md-center">
+        <div className="">
           <h1>Register</h1>
           <form>
             <ul>
