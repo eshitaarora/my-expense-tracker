@@ -25,6 +25,7 @@ const Register = () => {
       .then((data) => {
         console.log("Value stored successfully!", data);
         // Handle any further actions after successful storage
+        window.location.href = "/";
       })
       .catch((error) => {
         console.error("Error storing value:", error);

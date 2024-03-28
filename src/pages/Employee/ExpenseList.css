@@ -27,6 +27,7 @@ tbody tr {
 
 td {
   padding: 10px; /* Add padding to body cells */
+  color: #000000;
 }
 
 /* Specific element styles */

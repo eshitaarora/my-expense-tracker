@@ -22,6 +22,10 @@ const getExpenseById = (employeeId) => {
   return axios.get(`${expenseUrl}/${employeeId}`);
 };
 
+const getExpenses = (managerId) => {
+  console.log(`${expenseUrl}/${managerId}/"expenses"`);
+  return axios.get(`${expenseUrl}/${managerId}/expenses`);
+};
 const addExpense = (expenseDetails) => {
   return axios.post(expenseUrl, expenseDetails);
 };
@@ -30,7 +34,7 @@ const delExpense = (expenseid) => {
   return axios.delete(`${expenseUrl}/${expenseid}`);
 };
 
-const editExpense = (expenseid) => {
+const editExpense = (expenseid, expense) => {
   return axios.put(`${expenseUrl}/${expenseid}`);
 };
 // more functions
@@ -38,6 +42,7 @@ const editExpense = (expenseid) => {
 export {
   getAllExpenses,
   delExpense,
+  getExpenses,
   // getProductsWithPagination,
   editExpense,
   getExpenseById,

@@ -27,6 +27,7 @@ const Login = () => {
         credentials
       );
       const { designation } = response.data;
+      localStorage.setItem("employeeId", response.data["id"]);
       if (designation === "Manager") {
         // Redirect to the admin page
         window.location.href = "/managerhome";

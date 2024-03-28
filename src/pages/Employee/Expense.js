@@ -32,6 +32,7 @@ const Expense = () => {
       // .then((response) => response.json())
       .then((data) => {
         console.log("Value stored successfully!", data);
+        window.location.href = "/expenselist";
         // Handle any further actions after successful storage
       })
       .catch((error) => {
@@ -39,6 +40,7 @@ const Expense = () => {
         // Handle error case
       });
   };
+  console.log(expenseDescription);
 
   return (
     <>
@@ -95,21 +97,19 @@ const Expense = () => {
             </ul>
 
             <ul>
-              <label className="desc" id="desc">
-                ExpenseDescription
-              </label>
+              <label>ExpenseDescription</label>
               <> </>
               <input
                 type="text"
-                className="desc"
-                id="desc"
+                // className="desc"
+                // id="desc"
                 value={expenseDescription}
                 onChange={(e) => setExpenseDescription(e.target.value)}
               ></input>
             </ul>
 
-            <ul>
-              <label className="desc" id="desc">
+            <ul hidden>
+              <label className="desc" id="desc" hidden>
                 Status
               </label>
               <> </>
@@ -119,6 +119,7 @@ const Expense = () => {
                 id="desc"
                 value={status}
                 onChange={(e) => setStatus(e.target.value)}
+                hidden
               ></input>
             </ul>
 

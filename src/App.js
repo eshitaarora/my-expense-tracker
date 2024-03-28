@@ -10,10 +10,11 @@ import Footer from "./pages/Footer";
 import Expense from "./pages/Employee/Expense";
 import ExpenseChart from "./pages/Manager/ExpenseTable";
 import ManHome from "./pages/Manager/ManHome";
-import ExpenseList from "./components/employee/ExpenseList";
+import ExpenseList from "./pages/Employee/ExpenseList";
 import Page404 from "./pages/Page404";
 import ExpenseTable from "./pages/Manager/ExpenseTable";
 import SearchBar from "./pages/Employee/SearchBar";
+import UpdateExpense from "./pages/Employee/UpdateExpense";
 
 function App() {
   return (
@@ -32,6 +33,11 @@ function App() {
         <Route path="/expenselist" element={<ExpenseList />} />
         <Route path="/expensetable" element={<ExpenseTable />} />
         <Route path="/searchbar" element={<SearchBar />} />
+        <Route
+          exact
+          path="/updateExpense/:expenseId"
+          element={<UpdateExpense />}
+        />
         <Route path="*" element={<Page404 />} />
       </Routes>
     </Router>
