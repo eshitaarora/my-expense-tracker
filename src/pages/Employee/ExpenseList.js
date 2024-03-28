@@ -77,7 +77,6 @@ const ExpenseList = () => {
       <div>
         <>
           <h2>EXPENSE DETAILS</h2>
-
           <table
             border="2"
             width="500"

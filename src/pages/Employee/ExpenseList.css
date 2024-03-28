@@ -2,7 +2,7 @@
 table {
   border-collapse: collapse; /* Ensure borders collapse properly */
   width: 100%; /* Make table fill available width */
-  margin-bottom: 20px; /* Add some spacing below the table */
+  margin-bottom: 500px; /* Add some spacing below the table */
 }
 
 /* Table header (thead) styling */

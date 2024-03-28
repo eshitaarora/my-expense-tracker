@@ -2,11 +2,12 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Helvetica; /* Set a default font if desired */
+    font-family: monospace; /* Set a default font if desired */
   }
   
   .container {
     /* Style the About page title */
+    font-size: large;
     text-align: center;
     /* margin-bottom: -6rem; */
     margin-top: 0rem;
@@ -25,5 +26,6 @@ body {
     margin-right:-150px;
   }
 .h2,p,link{
-    color:#41913a;
+    color:#000000;
+    font-weight: bold;
 }

@@ -186,7 +186,7 @@ const ExpenseTable = () => {
                     <td>{user.employeeId}</td>
                     <td>{user.dateOfRequest}</td>
                     <td>{user.expenseType}</td>
-                    <td>{user.expenseDesciption}</td>
+                    <td>{user.expenseDescription}</td>
                     <td>{user.amount}</td>
                     <td>
                       <select

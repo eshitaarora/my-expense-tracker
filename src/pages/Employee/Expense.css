@@ -1,13 +1,15 @@
 /* Base styles for consistent typography and spacing */
 body {
-  font-family: sans-serif;
+  font-family: monospace;
   font-size: 10px;
   line-height: 1.5;
   margin: 0;
+  text-align: center;
 }
 
 h2 {
   margin-bottom: 2px;
+  align-items: center;
 }
 
 ul {
@@ -27,7 +29,7 @@ select {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
-  margin-bottom: 15px;
+  margin-bottom: 2px;
 }
 
 /* Layout for form elements with clear labeling and structure */
@@ -36,6 +38,26 @@ select {
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 2px;
+}
+/* Target the form container */
+.row.justify-content-md-center > form {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Create two equal-width columns */
+  grid-gap: 20px; /* Add spacing between columns */
+  
+}
+
+
+/* Adjust labels for better alignment */
+label {
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* Style the submit button to span both columns (optional) */
+button[type="submit"] {
+  grid-column: span 2;
+  margin-top: 2px; /* Add some spacing above the button */
 }
 
 .form-group {
@@ -59,7 +81,7 @@ label + span { /* Targeting the empty <span> for visual clarity */
 .submit-button {
   background-color: #41913a;
   color: white;
-  padding: 10px 20px;
+  padding: 1px 2px;
   border: none;
   border-radius: 5px;
   cursor: pointer;

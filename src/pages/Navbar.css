@@ -2,7 +2,7 @@
     left: 0; /* Position navbar to the left */
     width: 250px; /* Adjust width as needed */
     height: 99vh; /* Full height of viewport */
-    background-color: #40423f; /* Light background color */
+    background-color: #403f42; /* Light background color */
     padding: 10px 10px; /* Add padding */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
     position: fixed; bottom: 0; left: 0
